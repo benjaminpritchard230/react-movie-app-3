@@ -13,7 +13,9 @@ const Navbar = ({ setSearchText }) => {
       <div className="row">
         <div className="col-6 align-self-center">
           <div className="d-flex align-items-center ">
-            <h2>Movie App</h2>
+            <Link to={"/"}>
+              <h2>Movie App</h2>
+            </Link>
           </div>
         </div>
         <div className="col-6 align-self-center">

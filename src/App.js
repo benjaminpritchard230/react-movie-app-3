@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Searchpage from "./components/Searchpage";
 import { useState, useEffect } from "react";
+import MovieDetails from "./components/MovieDetails";
 
 // Api key 9fb5564d1a088cb776b062fc755ea04e
 
@@ -41,6 +42,7 @@ function App() {
               />
             }
           />
+          <Route path="/moviedetails/:id" element={<MovieDetails />} />
         </Routes>
       </Router>
     </div>

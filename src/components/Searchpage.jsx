@@ -11,7 +11,7 @@ const Searchpage = ({ searchText, searchResults }) => {
           <h3>Showing results for "{searchText}":</h3>
         </div>
       </div>
-      <div className="row ">{movieResults}</div>
+      <div className="row ">{searchText.length > 0 ? movieResults : ""}</div>
     </div>
   );
 };
