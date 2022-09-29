@@ -4,7 +4,15 @@ import { useEffect, useState } from "react";
 const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
-  const imageUrl = useEffect(() => {
+  const imageUrl = `https://image.tmdb.org/t/p/w600_and_h900_bestv2/${movie?.poster_path}`;
+
+  const convertMinutes = (minutes) => {
+    let hours = Math.floor(minutes / 60);
+    let mins = minutes % 60;
+    return `${hours}h ${mins}m`;
+  };
+
+  useEffect(() => {
     fetch(
       `https://api.themoviedb.org/3/movie/${id}?api_key=9fb5564d1a088cb776b062fc755ea04e&language=en-US`
     )
@@ -28,17 +36,14 @@ const MovieDetails = () => {
             <span> &#x2022; </span>
             <p>{movie?.genres?.[0]?.name}</p>
             <span> &#x2022; </span>
-            <p>{movie?.runtime}</p>
+            <p>{convertMinutes(movie?.runtime)}</p>
           </div>
 
           <p>{movie?.overview}</p>
         </div>
       </div>
       <div class="col-6 d-flex flex-column justify-content-center align-items-center">
-        <img
-          src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${movie?.poster_path}`}
-          alt=""
-        />
+        <img src={imageUrl} alt="" />
         <p>{movie?.tagline}</p>
       </div>
     </div>

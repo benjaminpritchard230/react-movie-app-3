@@ -6,9 +6,8 @@ const MovieCard = ({ movie }) => {
 
   return (
     <div class="col-12">
-      {movie.title}
       <Link to={detailUrl}>
-        <div>Link</div>
+        <button className="button-2">{movie.title}</button>
       </Link>
     </div>
   );

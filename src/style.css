@@ -23,7 +23,7 @@ body {
   padding: 20px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   width: 1000px;
-  min-height: fit-content;
+  min-height: 500px;
   color: var(--midnight--blue);
 }
 
@@ -54,4 +54,37 @@ input {
 img {
   width: 50%;
   border-radius: 15px;
+}
+
+button {
+  border-radius: 15px;
+  border: none;
+  padding: 15px;
+  background-color: var(--midnight--blue);
+  color: var(--baby--blue);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.button-2 {
+  border-radius: 15px;
+  border: none;
+  padding: 15px;
+  margin-bottom: 5px;
+  color: var(--midnight--blue);
+  background-color: var(--baby--blue);
+  box-shadow: none;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1.03);
+}
+
+.button-2:hover {
+  background-color: var(--midnight--blue);
+  color: var(--baby--blue);
+  transform: none;
 }
